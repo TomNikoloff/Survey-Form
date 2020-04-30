@@ -7,20 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       body {
-        background-image: url(https://wallpapertag.com/wallpaper/full/4/7/4/124349-gym-background-2048x1430-for-android-tablet.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
+          background-image: url(https://wallpapertag.com/wallpaper/full/4/7/4/124349-gym-background-2048x1430-for-android-tablet.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
       }
       .container {
-        text-align: left;
-        width:700px;
-        max-width:90%;
-        margin:10px auto;
-        padding: 20px 12px 10px 12px;
-        border-radius: 5px;
-        background-color: #f2f2f2;
-        opacity: 0.95;
-        font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+          text-align: left;
+          width:700px;
+          max-width:90%;
+          margin:10px auto;
+          padding: 20px 12px 10px 12px;
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          opacity: 0.95;
+          font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
         }
         h1 {
           text-align: center;
@@ -35,29 +35,37 @@
           color: #A64604;
         }
         .borders {
-        border: 1px solid #ccc;
-        padding: 10px
+          border: 1px solid #ccc;
+          padding: 10px
         }
         input[type=text],
         input[type=email],
         input[type=number],
         select{
-        width: 200px;
-        height: 25px;
-        padding: 3px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        vertical-align: middle
+          width: 200px;
+          height: 25px;
+          padding: 3px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          vertical-align: middle
         }
-        #name-label, #email-label, #age-label, #gender-label, #role-label, #hear-label, #recom-label {
-        font-weight: bold;
+        #name-label, #email-label, #age-label, #gender-label, #role-label, #hear-label, #recom-label, #comments {
+          font-weight: bold;
         }
         ::placeholder {
           color: black;
           opacity: 1;
+        }
+        #submit {
+          width: 100px;
+          height: 25px;
+          background-color: orange;
+        }
+        #submit:hover {
+          background-color: #A64604;
         }
     </style>
   </head>
@@ -124,6 +132,15 @@
             <label for="NS">
               <input id="NS" type="radio" name="user-recom" value="not sure"/>Not Sure
             </label><br>
+          </div>
+          <br>
+          <div id="comment-area">
+            <label id="comments">Any additional comments or suggestions?</label><br>
+            <textarea type="text" placeholder="Enter your comments here....."></textarea><br>
+          </div>
+          <br>
+          <div align="center">
+            <button id="submit" type="submit">Submit</button>
           </div>
        </form>
     </div>
