@@ -8,15 +8,18 @@
     <style>
       body {
         background-image: url(https://wallpapertag.com/wallpaper/full/4/7/4/124349-gym-background-2048x1430-for-android-tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
       }
       .container {
         text-align: left;
         width:700px;
         max-width:90%;
         margin:10px auto;
-        padding: 20px 12px 10px 20px;
+        padding: 20px 12px 10px 12px;
         border-radius: 5px;
         background-color: #f2f2f2;
+        opacity: 0.95;
         font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
         }
         h1 {
@@ -28,7 +31,7 @@
         #description {
           color: #A64604;
         }
-        #email {
+        #instruct-text {
           color: #A64604;
         }
         .borders {
@@ -49,6 +52,13 @@
         box-sizing: border-box;
         vertical-align: middle
         }
+        #name-label, #email-label, #age-label, #gender-label, #role-label, #hear-label, #recom-label {
+        font-weight: bold;
+        }
+        ::placeholder {
+          color: black;
+          opacity: 1;
+        }
     </style>
   </head>
   <body>
@@ -63,7 +73,7 @@
         </div>
         <div class="borders">
           <label id="email-label" for="email">Email<span class="mandatory">*</span></label><br>
-          <p id="email">Please provide a valid email address, so we can contact you if required.</p><br>
+          <p id="instruct-text">Please provide a valid email address, so we can contact you if required.</p><br>
           <input id="email" type="email" name="email" placeholder="Enter your email here" required/>
         </div>
         <div class="borders">
@@ -72,7 +82,7 @@
         </div>
         <div class="borders">
           <label id="gender-label" for="gender">Gender<span class="mandatory">*</span></label><br>
-          <select id="dropdown" name="gender" required/>
+          <select id="dropdown" name="gender" required>
             <option>Choose your gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -80,7 +90,7 @@
         </div>
         <div class="borders">
           <label id="role-label">Which option best describes your current role?</label><br>
-          <select id="dropdown" name="role" required/>
+          <select id="dropdown" name="role" required>
             <option>Select your current role</option>
             <option value="student">Student</option>
             <option value="part-time">Part Time Employed</option>
@@ -90,8 +100,32 @@
             <option value="other">Other</option>
           </select>
          </div>
-
-      </form>
+         <div class="borders">
+           <label id="hear-label">How did you hear about us?</label><span id="instruct-text"> (Check all that apply)</span><br>
+           <label for="SM">
+             <input id="SM" type="checkbox" name="hear" value="social media"/>Social Media
+           </label><br>
+           <label for="SE">
+             <input id="SE" type="checkbox" name="hear" value="search engine"/>Search Engine
+           </label><br>
+           <label for="Ads">
+             <input id="Ads" type="checkbox" name="hear" value="advertising"/>Advertising
+           </label><br>
+             Other: <input id="Other" type="text" name="" value=""/><br>
+          </div>
+          <div class="borders">
+            <label id="recom-label">Would you recommend us to a friend or colleague?</label><br>
+            <label for="Def">
+              <input id="Def" type="radio" name="user-recom" value="definitely" checked/>Definitely
+            </label><br>
+            <label for="Maybe">
+              <input id="Maybe" type="radio" name="user-recom" value="maybe"/>Maybe
+            </label><br>
+            <label for="NS">
+              <input id="NS" type="radio" name="user-recom" value="not sure"/>Not Sure
+            </label><br>
+          </div>
+       </form>
     </div>
   </body>
 </html>
