@@ -60,12 +60,20 @@
           opacity: 1;
         }
         #submit {
-          width: 100px;
-          height: 25px;
+          display: block;
+          width: 80%;
+          border-radius: 2px;
           background-color: orange;
+          border: none;
         }
         #submit:hover {
           background-color: #A64604;
+          text-decoration: underline;
+        }
+        textarea {
+          width: 99%;
+          min-height: 100px;
+          resize: vertical;
         }
     </style>
   </head>
@@ -134,7 +142,7 @@
             </label><br>
           </div>
           <br>
-          <div id="comment-area">
+          <div>
             <label id="comments">Any additional comments or suggestions?</label><br>
             <textarea type="text" placeholder="Enter your comments here....."></textarea><br>
           </div>
