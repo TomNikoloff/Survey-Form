@@ -28,9 +28,26 @@
         #description {
           color: #A64604;
         }
+        #email {
+          color: #A64604;
+        }
         .borders {
         border: 1px solid #ccc;
         padding: 10px
+        }
+        input[type=text],
+        input[type=email],
+        input[type=number],
+        select{
+        width: 200px;
+        height: 25px;
+        padding: 3px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        vertical-align: middle
         }
     </style>
   </head>
@@ -41,7 +58,37 @@
       <h3><span class="mandatory">*</span>Denotes mandatory fields</h3>
       <form>
         <div class="borders">
+          <label id="name-label" for="name">Full Name<span class="mandatory">*</span></label><br>
+          <input id="name" type="text" name="full_name" placeholder="Enter your name here" required/>
         </div>
+        <div class="borders">
+          <label id="email-label" for="email">Email<span class="mandatory">*</span></label><br>
+          <p id="email">Please provide a valid email address, so we can contact you if required</p><br>
+          <input id="email" type="email" name="email" placeholder="Enter your email here" required/>
+        </div>
+        <div class="borders">
+          <label id="age-label" for="age">Age<span class="mandatory">*</span></label><br>
+          <input id="number" type="number" name="age" min="18" max="99" placeholder="Enter your age here" required/>
+        </div>
+        <div class="borders">
+          <label id="gender-label" for="gender">Gender<span class="mandatory">*</span></label><br>
+          <select id="dropdown" name="gender" required/>
+            <option>Choose your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </div>
+        <div class="borders">
+          <label id="role-label">Which option best describes your current role?</label>
+          <select id="dropdown" name="role" required>
+            <option>Select your current role</option>
+            <option value="student">Student</option>
+            <option value="part-time">Part Time Employed</option>
+            <option value="full-time">Full Time Employed</option>
+            <option value="self-employed">Self Employed</option>
+            <option value="prefernot">Prefer Not To Say</option>
+            <option value="other">Other</option>
+         </div>
+
       </form>
     </div>
   </body>
