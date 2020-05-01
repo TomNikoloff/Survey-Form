@@ -76,9 +76,13 @@
           min-height: 100px;
           resize: vertical;
           padding: 5px 0 0 5px;
+          font: inherit;
         }
         p {
           margin: 0;
+        }
+        #sub-div {
+          min-height: 35px;
         }
     </style>
   </head>
@@ -152,7 +156,7 @@
             <textarea type="text" placeholder="Enter your comments here....."></textarea><br>
           </div>
           <br>
-          <div align="center">
+          <div id="sub-div" align="center">
             <button id="submit" type="submit">Submit</button>
           </div>
        </form>
